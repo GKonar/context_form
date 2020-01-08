@@ -27,7 +27,7 @@ class Form extends Component {
             <LockOutlinedIcon />
           </Avatar>
           <Typography variant="h5">
-            Sign In 
+            Sign In
           </Typography>
           <Select value="english">
             <MenuItem value="english">English</MenuItem>
@@ -43,10 +43,10 @@ class Form extends Component {
               <InputLabel htmlFor="password">Password</InputLabel>
               <Input id="password" name="password" autoFocus></Input>
             </FormControl>
-            <FormControlLabel control={<Checkbox color="primary"/>} label="Remember me"/>
+            <FormControlLabel control={<Checkbox color="primary" />} label="Remember me" />
             <Button variant="contained" type="submit" fullWidth color="primary" className={classes.submit}>Sing In</Button>
           </form>
-        </Paper>   
+        </Paper>
       </main>
     )
   }
