@@ -8,7 +8,7 @@ export class ThemeProvider extends Component {
     this.state = { isDarkMode: false };
 
     this.toggleTheme = this.toggleTheme.bind(this);
-  }
+  } 
   
   toggleTheme() {
     this.setState({ isDarkMode: !this.state.isDarkMode })
