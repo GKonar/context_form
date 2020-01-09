@@ -10,13 +10,16 @@ import { withStyles } from '@material-ui/core/styles';
 
 import styles from './styles/NavbarStyles';
 
+import { ThemeContext } from './contexts/ThemeContext';
 class Navbar extends Component {
   render() {
+    const { isDarkMode, toggleTheme } = this.context; 
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
         <AppBar position="static" color="primary">
+        <AppBar position="static" color={isDarkMode ? "default" : "primary"}>
           <ToolBar>
             <IconButton className={classes.menuButton}>
               <span>🇫🇷</span>
@@ -25,6 +28,7 @@ class Navbar extends Component {
               App title
             </Typography>
             <Switch />
+            <Switch onChange={ toggleTheme } />
             <div className={classes.grow} />
             <div className={classes.search}>
               <div className={classes.searchIcon}>
